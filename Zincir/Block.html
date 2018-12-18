@@ -181,7 +181,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oguzbilgic/zincir-crystal/blob/716a3e948b265860605d65d93b5019540335da74/src/zincir/block.cr#L5" target="_blank">
+      <a href="https://github.com/oguzbilgic/zincir-crystal/blob/cb9164e51e7f1b72e030f3d05b754cfc39a9411a/src/zincir/block.cr#L5" target="_blank">
         zincir/block.cr
       </a>
     
@@ -196,7 +196,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28index%2Ctimestamp%2Cdata%2Cprevious_hash%2Cdifficulty%29-class-method" class="signature"><strong>.new</strong>(index, timestamp, data, previous_hash, difficulty)</a>
+        <a href="#new%28index%2Ctimestamp%2Cdata%2Cprevious_hash%2Cdifficulty%2Cnonce%3Dnil%29-class-method" class="signature"><strong>.new</strong>(index, timestamp, data, previous_hash, difficulty, nonce = <span class="n">nil</span>)</a>
         
           <div class="summary"><p>Creates a <code><a href="../Zincir/Block.html">Block</a></code> with the given information and solves the hash</p></div>
         
@@ -213,6 +213,13 @@
 
   <h2>Class Method Summary</h2>
   <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#calculate_hash%28nonce%3AString%2Cindex%3AString%2Ctimestamp%3AString%2Cdata%2Cprevious_hash%29-class-method" class="signature"><strong>.calculate_hash</strong>(nonce : String, index : String, timestamp : String, data, previous_hash)</a>
+        
+          <div class="summary"><p>Returns the hash of the <code><a href="../Zincir/Block.html">Block</a></code> with the given <em>nonce</em></p></div>
+        
+      </li>
     
       <li class="entry-summary">
         <a href="#first-class-method" class="signature"><strong>.first</strong></a>
@@ -235,8 +242,6 @@
     
       <li class="entry-summary">
         <a href="#calculate_hash%28nonce%29-instance-method" class="signature"><strong>#calculate_hash</strong>(nonce)</a>
-        
-          <div class="summary"><p>Returns the hash of the <code><a href="../Zincir/Block.html">Block</a></code> with the given <em>nonce</em></p></div>
         
       </li>
     
@@ -342,12 +347,12 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(index,timestamp,data,previous_hash,difficulty)-class-method">
+    <div class="entry-detail" id="new(index,timestamp,data,previous_hash,difficulty,nonce=nil)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(index, timestamp, data, previous_hash, difficulty)
+        def self.<strong>new</strong>(index, timestamp, data, previous_hash, difficulty, nonce = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new%28index%2Ctimestamp%2Cdata%2Cprevious_hash%2Cdifficulty%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28index%2Ctimestamp%2Cdata%2Cprevious_hash%2Cdifficulty%2Cnonce%3Dnil%29-class-method">#</a>
       </div>
       
         <div class="doc"><p>Creates a <code><a href="../Zincir/Block.html">Block</a></code> with the given information and solves the hash</p>
@@ -357,7 +362,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/716a3e948b265860605d65d93b5019540335da74/src/zincir/block.cr#L21" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/cb9164e51e7f1b72e030f3d05b754cfc39a9411a/src/zincir/block.cr#L21" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -381,6 +386,24 @@
 
   <h2>Class Method Detail</h2>
   
+    <div class="entry-detail" id="calculate_hash(nonce:String,index:String,timestamp:String,data,previous_hash)-class-method">
+      <div class="signature">
+        
+        def self.<strong>calculate_hash</strong>(nonce : String, index : String, timestamp : String, data, previous_hash)
+
+        <a class="method-permalink" href="#calculate_hash%28nonce%3AString%2Cindex%3AString%2Ctimestamp%3AString%2Cdata%2Cprevious_hash%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns the hash of the <code><a href="../Zincir/Block.html">Block</a></code> with the given <em>nonce</em></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/cb9164e51e7f1b72e030f3d05b754cfc39a9411a/src/zincir/block.cr#L68" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
     <div class="entry-detail" id="first-class-method">
       <div class="signature">
         
@@ -394,7 +417,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/716a3e948b265860605d65d93b5019540335da74/src/zincir/block.cr#L27" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/cb9164e51e7f1b72e030f3d05b754cfc39a9411a/src/zincir/block.cr#L32" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -410,7 +433,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/716a3e948b265860605d65d93b5019540335da74/src/zincir/block.cr#L31" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/cb9164e51e7f1b72e030f3d05b754cfc39a9411a/src/zincir/block.cr#L36" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -428,12 +451,10 @@
         <a class="method-permalink" href="#calculate_hash%28nonce%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Returns the hash of the <code><a href="../Zincir/Block.html">Block</a></code> with the given <em>nonce</em></p></div>
-      
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/716a3e948b265860605d65d93b5019540335da74/src/zincir/block.cr#L59" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/cb9164e51e7f1b72e030f3d05b754cfc39a9411a/src/zincir/block.cr#L63" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -505,7 +526,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/716a3e948b265860605d65d93b5019540335da74/src/zincir/block.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/cb9164e51e7f1b72e030f3d05b754cfc39a9411a/src/zincir/block.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -521,7 +542,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/716a3e948b265860605d65d93b5019540335da74/src/zincir/block.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/cb9164e51e7f1b72e030f3d05b754cfc39a9411a/src/zincir/block.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -567,7 +588,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/716a3e948b265860605d65d93b5019540335da74/src/zincir/block.cr#L47" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/cb9164e51e7f1b72e030f3d05b754cfc39a9411a/src/zincir/block.cr#L52" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -611,7 +632,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/716a3e948b265860605d65d93b5019540335da74/src/zincir/block.cr#L35" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/cb9164e51e7f1b72e030f3d05b754cfc39a9411a/src/zincir/block.cr#L40" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -631,7 +652,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/716a3e948b265860605d65d93b5019540335da74/src/zincir/block.cr#L42" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/cb9164e51e7f1b72e030f3d05b754cfc39a9411a/src/zincir/block.cr#L47" target="_blank">View source</a>]
         
       </div>
     </div>
