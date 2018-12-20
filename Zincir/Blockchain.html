@@ -188,7 +188,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oguzbilgic/zincir-crystal/blob/61e201b709590e799ee609f46f82a8065902a0b8/src/zincir/blockchain.cr#L5" target="_blank">
+      <a href="https://github.com/oguzbilgic/zincir-crystal/blob/a923377fda541039bedd1ae256947b5708a3d68c/src/zincir/blockchain.cr#L5" target="_blank">
         zincir/blockchain.cr
       </a>
     
@@ -251,6 +251,16 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#check_orphans%28parent%29-instance-method" class="signature"><strong>#check_orphans</strong>(parent)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#heighest_chain-instance-method" class="signature"><strong>#heighest_chain</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#last-instance-method" class="signature"><strong>#last</strong></a>
         
           <div class="summary"><p>Returns the last <code><a href="../Zincir/Block.html">Block</a></code> in the blockchain</p></div>
@@ -259,6 +269,11 @@
     
       <li class="entry-summary">
         <a href="#next_difficulty-instance-method" class="signature"><strong>#next_difficulty</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#next_difficulty_at%28index%29-instance-method" class="signature"><strong>#next_difficulty_at</strong>(index)</a>
         
           <div class="summary"><p>Returns the required difficulty for the next <code><a href="../Zincir/Block.html">Block</a></code></p></div>
         
@@ -275,6 +290,11 @@
         <a href="#queue_block%28block%29-instance-method" class="signature"><strong>#queue_block</strong>(block)</a>
         
           <div class="summary"><p>Queues the <em>block</em> to be added to the blockchain</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tips-instance-method" class="signature"><strong>#tips</strong></a>
         
       </li>
     
@@ -348,7 +368,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/61e201b709590e799ee609f46f82a8065902a0b8/src/zincir/blockchain.cr#L19" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/a923377fda541039bedd1ae256947b5708a3d68c/src/zincir/blockchain.cr#L34" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -373,7 +393,39 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/61e201b709590e799ee609f46f82a8065902a0b8/src/zincir/blockchain.cr#L30" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/a923377fda541039bedd1ae256947b5708a3d68c/src/zincir/blockchain.cr#L55" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="check_orphans(parent)-instance-method">
+      <div class="signature">
+        
+        def <strong>check_orphans</strong>(parent)
+
+        <a class="method-permalink" href="#check_orphans%28parent%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/a923377fda541039bedd1ae256947b5708a3d68c/src/zincir/blockchain.cr#L91" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="heighest_chain-instance-method">
+      <div class="signature">
+        
+        def <strong>heighest_chain</strong>
+
+        <a class="method-permalink" href="#heighest_chain-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/a923377fda541039bedd1ae256947b5708a3d68c/src/zincir/blockchain.cr#L41" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -391,7 +443,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/61e201b709590e799ee609f46f82a8065902a0b8/src/zincir/blockchain.cr#L25" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/a923377fda541039bedd1ae256947b5708a3d68c/src/zincir/blockchain.cr#L50" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -404,12 +456,28 @@
         <a class="method-permalink" href="#next_difficulty-instance-method">#</a>
       </div>
       
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/a923377fda541039bedd1ae256947b5708a3d68c/src/zincir/blockchain.cr#L69" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="next_difficulty_at(index)-instance-method">
+      <div class="signature">
+        
+        def <strong>next_difficulty_at</strong>(index)
+
+        <a class="method-permalink" href="#next_difficulty_at%28index%29-instance-method">#</a>
+      </div>
+      
         <div class="doc"><p>Returns the required difficulty for the next <code><a href="../Zincir/Block.html">Block</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/61e201b709590e799ee609f46f82a8065902a0b8/src/zincir/blockchain.cr#L40" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/a923377fda541039bedd1ae256947b5708a3d68c/src/zincir/blockchain.cr#L74" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -427,7 +495,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/61e201b709590e799ee609f46f82a8065902a0b8/src/zincir/blockchain.cr#L35" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/a923377fda541039bedd1ae256947b5708a3d68c/src/zincir/blockchain.cr#L65" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -445,7 +513,23 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/61e201b709590e799ee609f46f82a8065902a0b8/src/zincir/blockchain.cr#L53" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/a923377fda541039bedd1ae256947b5708a3d68c/src/zincir/blockchain.cr#L87" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tips-instance-method">
+      <div class="signature">
+        
+        def <strong>tips</strong>
+
+        <a class="method-permalink" href="#tips-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/a923377fda541039bedd1ae256947b5708a3d68c/src/zincir/blockchain.cr#L45" target="_blank">View source</a>]
         
       </div>
     </div>
