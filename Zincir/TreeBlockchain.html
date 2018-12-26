@@ -14,7 +14,7 @@
 </script>
 
   <meta id="repository-name" content="github.com/oguzbilgic/zincir-crystal">
-  <title>Zincir::Blockchain - github.com/oguzbilgic/zincir-crystal</title>
+  <title>Zincir::TreeBlockchain - github.com/oguzbilgic/zincir-crystal</title>
 </head>
 <body>
 
@@ -41,20 +41,20 @@
       
         <ul>
   
+  <li class=" " data-id="github.com/oguzbilgic/zincir-crystal/Zincir/ArrayBlockchain" data-name="zincir::arrayblockchain">
+      <a href="../Zincir/ArrayBlockchain.html">ArrayBlockchain</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/oguzbilgic/zincir-crystal/Zincir/Block" data-name="zincir::block">
       <a href="../Zincir/Block.html">Block</a>
       
     </li>
   
-  <li class="parent open current" data-id="github.com/oguzbilgic/zincir-crystal/Zincir/Blockchain" data-name="zincir::blockchain">
+  <li class="parent " data-id="github.com/oguzbilgic/zincir-crystal/Zincir/Blockchain" data-name="zincir::blockchain">
       <a href="../Zincir/Blockchain.html">Blockchain</a>
       
         <ul>
-  
-  <li class=" " data-id="github.com/oguzbilgic/zincir-crystal/Zincir/Blockchain/Array" data-name="zincir::blockchain::array">
-      <a href="../Zincir/Blockchain/Array.html">Array</a>
-      
-    </li>
   
   <li class=" " data-id="github.com/oguzbilgic/zincir-crystal/Zincir/Blockchain/BlockIndexTooHigh" data-name="zincir::blockchain::blockindextoohigh">
       <a href="../Zincir/Blockchain/BlockIndexTooHigh.html">BlockIndexTooHigh</a>
@@ -73,11 +73,6 @@
   
   <li class=" " data-id="github.com/oguzbilgic/zincir-crystal/Zincir/Blockchain/BlockOnForkChain" data-name="zincir::blockchain::blockonforkchain">
       <a href="../Zincir/Blockchain/BlockOnForkChain.html">BlockOnForkChain</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/oguzbilgic/zincir-crystal/Zincir/Blockchain/Tree" data-name="zincir::blockchain::tree">
-      <a href="../Zincir/Blockchain/Tree.html">Tree</a>
       
     </li>
   
@@ -146,6 +141,11 @@
       
     </li>
   
+  <li class=" current" data-id="github.com/oguzbilgic/zincir-crystal/Zincir/TreeBlockchain" data-name="zincir::treeblockchain">
+      <a href="../Zincir/TreeBlockchain.html">TreeBlockchain</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/oguzbilgic/zincir-crystal/Zincir/Web" data-name="zincir::web">
       <a href="../Zincir/Web.html">Web</a>
       
@@ -165,12 +165,12 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">abstract class</span> Zincir::Blockchain
+  <span class="kind">class</span> Zincir::TreeBlockchain
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Zincir/Blockchain.html">Zincir::Blockchain</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Zincir/TreeBlockchain.html">Zincir::TreeBlockchain</a></li><li class="superclass"><a href="../Zincir/Blockchain.html">Zincir::Blockchain</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
 
 
 
@@ -179,25 +179,9 @@
 
 
 
-  <h2>Included Modules</h2>
-  <ul class="other-types-list">
-  
-    <li class="other-type"><a href="../Zincir/Emitter.html">Zincir::Emitter</a>(<a href="../Zincir/Block.html">Zincir::Block</a> -> Nil)</li>
-  
-  </ul>
 
 
 
-
-
-  <h2>Direct Known Subclasses</h2>
-  <ul class="other-types-list">
-  
-    <li class="other-type"><a href="../Zincir/Blockchain/Array.html">Zincir::Blockchain::Array</a></li>
-  
-    <li class="other-type"><a href="../Zincir/Blockchain/Tree.html">Zincir::Blockchain::Tree</a></li>
-  
-  </ul>
 
 
 
@@ -207,8 +191,8 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oguzbilgic/zincir-crystal/blob/c69904da5e059df82569d2362cda51d66d4d0105/src/zincir/blockchain.cr#L6" target="_blank">
-        zincir/blockchain.cr
+      <a href="https://github.com/oguzbilgic/zincir-crystal/blob/a923377fda541039bedd1ae256947b5708a3d68c/src/zincir/tree_blockchain.cr#L2" target="_blank">
+        zincir/tree_blockchain.cr
       </a>
     
     <br/>
@@ -216,32 +200,19 @@
 
 
 
-  
-    <h2>Constant Summary</h2>
-  
-  <dl>
-    
-      <dt class="entry-const" id="BLOCK_DURATION">
-        <strong>BLOCK_DURATION</strong> = <code><span class="n">60.0</span></code>
-      </dt>
-      
-      <dd class="entry-const-doc">
-        <p>Desired time between blocks</p>
-      </dd>
-      
-    
-      <dt class="entry-const" id="UPDATE_FREQUENCY">
-        <strong>UPDATE_FREQUENCY</strong> = <code><span class="n">60</span></code>
-      </dt>
-      
-      <dd class="entry-const-doc">
-        <p>Number of blocks between difficulty adjustments</p>
-      </dd>
-      
-    
-  </dl>
 
 
+  <h2>Constructors</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
+        
+          <div class="summary"><p>Creates a blockchain with the first block</p></div>
+        
+      </li>
+    
+  </ul>
 
 
 
@@ -261,13 +232,6 @@
         <a href="#last-instance-method" class="signature"><strong>#last</strong></a>
         
           <div class="summary"><p>Returns the last <code><a href="../Zincir/Block.html">Block</a></code> in the blockchain</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#next_difficulty-instance-method" class="signature"><strong>#next_difficulty</strong></a>
-        
-          <div class="summary"><p>Returns the required difficulty for the next <code><a href="../Zincir/Block.html">Block</a></code></p></div>
         
       </li>
     
@@ -292,6 +256,54 @@
 
 
 <div class="methods-inherited">
+  
+    
+
+  <h3>Instance methods inherited from class <code><a href="../Zincir/Blockchain.html">Zincir::Blockchain</a></code></h3>
+  
+  
+    <a href="../Zincir/Blockchain.html#block_at%28index%29-instance-method" class="tooltip">
+      <span>block_at(index)</span>
+    block_at</a>, 
+    
+  
+    <a href="../Zincir/Blockchain.html#last-instance-method" class="tooltip">
+      <span>last</span>
+    last</a>, 
+    
+  
+    <a href="../Zincir/Blockchain.html#next_difficulty-instance-method" class="tooltip">
+      <span>next_difficulty</span>
+    next_difficulty</a>, 
+    
+  
+    <a href="../Zincir/Blockchain.html#next_index-instance-method" class="tooltip">
+      <span>next_index</span>
+    next_index</a>, 
+    
+  
+    <a href="../Zincir/Blockchain.html#queue_block%28block%29-instance-method" class="tooltip">
+      <span>queue_block(block)</span>
+    queue_block</a>
+    
+  
+
+
+    
+
+  <h3>Constructor methods inherited from class <code><a href="../Zincir/Blockchain.html">Zincir::Blockchain</a></code></h3>
+  
+  
+    <a href="../Zincir/Blockchain.html#new-class-method" class="tooltip">
+      <span>new</span>
+    new</a>
+    
+  
+
+
+    
+
+
   
     
 
@@ -340,6 +352,27 @@
 </div>
 
 
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>
+
+        <a class="method-permalink" href="#new-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Creates a blockchain with the first block</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/a923377fda541039bedd1ae256947b5708a3d68c/src/zincir/tree_blockchain.cr#L14" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
 
 
 
@@ -348,7 +381,7 @@
   
     <div class="entry-detail" id="block_at(index)-instance-method">
       <div class="signature">
-        abstract 
+        
         def <strong>block_at</strong>(index)
 
         <a class="method-permalink" href="#block_at%28index%29-instance-method">#</a>
@@ -359,14 +392,14 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/c69904da5e059df82569d2362cda51d66d4d0105/src/zincir/blockchain.cr#L23" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/a923377fda541039bedd1ae256947b5708a3d68c/src/zincir/tree_blockchain.cr#L27" target="_blank">View source</a>]
         
       </div>
     </div>
   
     <div class="entry-detail" id="last-instance-method">
       <div class="signature">
-        abstract 
+        
         def <strong>last</strong>
 
         <a class="method-permalink" href="#last-instance-method">#</a>
@@ -377,25 +410,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/c69904da5e059df82569d2362cda51d66d4d0105/src/zincir/blockchain.cr#L20" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="next_difficulty-instance-method">
-      <div class="signature">
-        
-        def <strong>next_difficulty</strong>
-
-        <a class="method-permalink" href="#next_difficulty-instance-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Returns the required difficulty for the next <code><a href="../Zincir/Block.html">Block</a></code></p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/c69904da5e059df82569d2362cda51d66d4d0105/src/zincir/blockchain.cr#L29" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/a923377fda541039bedd1ae256947b5708a3d68c/src/zincir/tree_blockchain.cr#L22" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -413,14 +428,14 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/c69904da5e059df82569d2362cda51d66d4d0105/src/zincir/blockchain.cr#L34" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/a923377fda541039bedd1ae256947b5708a3d68c/src/zincir/tree_blockchain.cr#L37" target="_blank">View source</a>]
         
       </div>
     </div>
   
     <div class="entry-detail" id="queue_block(block)-instance-method">
       <div class="signature">
-        abstract 
+        
         def <strong>queue_block</strong>(block)
 
         <a class="method-permalink" href="#queue_block%28block%29-instance-method">#</a>
@@ -431,7 +446,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/c69904da5e059df82569d2362cda51d66d4d0105/src/zincir/blockchain.cr#L26" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/a923377fda541039bedd1ae256947b5708a3d68c/src/zincir/tree_blockchain.cr#L42" target="_blank">View source</a>]
         
       </div>
     </div>
