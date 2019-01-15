@@ -51,33 +51,8 @@
       
         <ul>
   
-  <li class=" " data-id="github.com/oguzbilgic/zincir-crystal/Zincir/Blockchain/Array" data-name="zincir::blockchain::array">
-      <a href="Zincir/Blockchain/Array.html">Array</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/oguzbilgic/zincir-crystal/Zincir/Blockchain/BlockIndexTooHigh" data-name="zincir::blockchain::blockindextoohigh">
-      <a href="Zincir/Blockchain/BlockIndexTooHigh.html">BlockIndexTooHigh</a>
-      
-    </li>
-  
   <li class=" " data-id="github.com/oguzbilgic/zincir-crystal/Zincir/Blockchain/BlockNotAdded" data-name="zincir::blockchain::blocknotadded">
       <a href="Zincir/Blockchain/BlockNotAdded.html">BlockNotAdded</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/oguzbilgic/zincir-crystal/Zincir/Blockchain/BlockNotPreferred" data-name="zincir::blockchain::blocknotpreferred">
-      <a href="Zincir/Blockchain/BlockNotPreferred.html">BlockNotPreferred</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/oguzbilgic/zincir-crystal/Zincir/Blockchain/BlockOnForkChain" data-name="zincir::blockchain::blockonforkchain">
-      <a href="Zincir/Blockchain/BlockOnForkChain.html">BlockOnForkChain</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/oguzbilgic/zincir-crystal/Zincir/Blockchain/Tree" data-name="zincir::blockchain::tree">
-      <a href="Zincir/Blockchain/Tree.html">Tree</a>
       
     </li>
   
@@ -221,9 +196,31 @@ provided ip and port configuration</p>
 
 <h2>Development</h2>
 
+<h3>High Level Overview</h3>
+
+<ul><li>Read and add cached blocks from <code>.blocks/</code> folder to blockchain. Whenever a 
+  new block is added to the chain, store it in the <code>.blocks/</code> folder</li><li>Unless <code>--local-net</code> is set, connect to seed host (testnet by default, can be 
+  updated with <code>--seed-ip</code> option)</li></ul>
+
+<ul><li>Compare our last block to network's last block</li><li>Find the highest common block between network and local</li><li>If network has a higher last block download all blocks between <code>common_block</code> </li></ul>
+
+<pre><code>and network</code></pre>
+
+<ul><li>If our last block is higher, broadcast all blocks between the <code>common_block</code> </li></ul>
+
+<pre><code>and our last block</code></pre>
+
+<ul><li>Once the network download or broadcast is complete, wait for 5 seconds and </li></ul>
+
+<pre><code>compare local and network last block</code></pre>
+
+<ul><li>If <code>--web</code> or <code>--port</code> option is provided start local web server</li><li>If <code>--host-ip</code> option is provided start public web server and broadcast our ip to 
+  all the connected hosts.</li><li>If <code>--mine</code> option is set start the miner to mine new blocks. When a new block 
+  is mined broadcast it to network</li></ul>
+
 <h3>Run tests</h3>
 
-<pre><code class="language-bash">$ crystal spec
+<pre><code class="language-bash">> crystal spec
   ...</code></pre>
 </div>
 </body>

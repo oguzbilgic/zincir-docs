@@ -51,33 +51,8 @@
       
         <ul>
   
-  <li class=" " data-id="github.com/oguzbilgic/zincir-crystal/Zincir/Blockchain/Array" data-name="zincir::blockchain::array">
-      <a href="../Zincir/Blockchain/Array.html">Array</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/oguzbilgic/zincir-crystal/Zincir/Blockchain/BlockIndexTooHigh" data-name="zincir::blockchain::blockindextoohigh">
-      <a href="../Zincir/Blockchain/BlockIndexTooHigh.html">BlockIndexTooHigh</a>
-      
-    </li>
-  
   <li class=" " data-id="github.com/oguzbilgic/zincir-crystal/Zincir/Blockchain/BlockNotAdded" data-name="zincir::blockchain::blocknotadded">
       <a href="../Zincir/Blockchain/BlockNotAdded.html">BlockNotAdded</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/oguzbilgic/zincir-crystal/Zincir/Blockchain/BlockNotPreferred" data-name="zincir::blockchain::blocknotpreferred">
-      <a href="../Zincir/Blockchain/BlockNotPreferred.html">BlockNotPreferred</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/oguzbilgic/zincir-crystal/Zincir/Blockchain/BlockOnForkChain" data-name="zincir::blockchain::blockonforkchain">
-      <a href="../Zincir/Blockchain/BlockOnForkChain.html">BlockOnForkChain</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/oguzbilgic/zincir-crystal/Zincir/Blockchain/Tree" data-name="zincir::blockchain::tree">
-      <a href="../Zincir/Blockchain/Tree.html">Tree</a>
       
     </li>
   
@@ -165,7 +140,7 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">abstract class</span> Zincir::Blockchain
+  <span class="kind">class</span> Zincir::Blockchain
 
 </h1>
 
@@ -190,15 +165,6 @@
 
 
 
-  <h2>Direct Known Subclasses</h2>
-  <ul class="other-types-list">
-  
-    <li class="other-type"><a href="../Zincir/Blockchain/Array.html">Zincir::Blockchain::Array</a></li>
-  
-    <li class="other-type"><a href="../Zincir/Blockchain/Tree.html">Zincir::Blockchain::Tree</a></li>
-  
-  </ul>
-
 
 
 
@@ -207,7 +173,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oguzbilgic/zincir-crystal/blob/703ce4859132df80e439c46cf39a644a01767a52/src/zincir/blockchain.cr#L6" target="_blank">
+      <a href="https://github.com/oguzbilgic/zincir-crystal/blob/59e39b70c008558f49cfaa0413417194bb337259/src/zincir/blockchain.cr#L8" target="_blank">
         zincir/blockchain.cr
       </a>
     
@@ -242,6 +208,18 @@
   </dl>
 
 
+
+  <h2>Constructors</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
+        
+          <div class="summary"><p>Creates a blockchain with the first block</p></div>
+        
+      </li>
+    
+  </ul>
 
 
 
@@ -284,9 +262,14 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#queue_block%28block%29-instance-method" class="signature"><strong>#queue_block</strong>(block)</a>
+        <a href="#queue_block%28block%3ABlock%29-instance-method" class="signature"><strong>#queue_block</strong>(block : Block)</a>
         
-          <div class="summary"><p>Queues the <em>block</em> to be added to the blockchain</p></div>
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tips%3AArray%28Zincir%3A%3ABlockchain%3A%3AChain%29-instance-method" class="signature"><strong>#tips</strong> : Array(Zincir::Blockchain::Chain)</a>
+        
+          <div class="summary"><p><span class="flag orange">TODO</span>  This shouldn't be exposed, currently for debugging purposes</p></div>
         
       </li>
     
@@ -355,6 +338,27 @@
 </div>
 
 
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>
+
+        <a class="method-permalink" href="#new-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Creates a blockchain with the first block</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/59e39b70c008558f49cfaa0413417194bb337259/src/zincir/blockchain.cr#L41" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
 
 
 
@@ -363,18 +367,22 @@
   
     <div class="entry-detail" id="block_at(index)-instance-method">
       <div class="signature">
-        abstract 
+        
         def <strong>block_at</strong>(index)
 
         <a class="method-permalink" href="#block_at%28index%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Returns the <code><a href="../Zincir/Block.html">Block</a></code> at <em>index</em></p></div>
+        <div class="doc"><p>Returns the <code><a href="../Zincir/Block.html">Block</a></code> at <em>index</em></p>
+
+<p><span class="flag purple">NOTE</span>  This finds the correct block comparing the branch property of
+the tip block and the blocks at the given index. There might be a
+easier way to find the block</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/703ce4859132df80e439c46cf39a644a01767a52/src/zincir/blockchain.cr#L28" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/59e39b70c008558f49cfaa0413417194bb337259/src/zincir/blockchain.cr#L69" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -390,14 +398,14 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/703ce4859132df80e439c46cf39a644a01767a52/src/zincir/blockchain.cr#L43" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/59e39b70c008558f49cfaa0413417194bb337259/src/zincir/blockchain.cr#L82" target="_blank">View source</a>]
         
       </div>
     </div>
   
     <div class="entry-detail" id="last-instance-method">
       <div class="signature">
-        abstract 
+        
         def <strong>last</strong>
 
         <a class="method-permalink" href="#last-instance-method">#</a>
@@ -408,7 +416,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/703ce4859132df80e439c46cf39a644a01767a52/src/zincir/blockchain.cr#L25" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/59e39b70c008558f49cfaa0413417194bb337259/src/zincir/blockchain.cr#L55" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -426,7 +434,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/703ce4859132df80e439c46cf39a644a01767a52/src/zincir/blockchain.cr#L34" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/59e39b70c008558f49cfaa0413417194bb337259/src/zincir/blockchain.cr#L93" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -444,25 +452,41 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/703ce4859132df80e439c46cf39a644a01767a52/src/zincir/blockchain.cr#L39" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/59e39b70c008558f49cfaa0413417194bb337259/src/zincir/blockchain.cr#L50" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="queue_block(block)-instance-method">
+    <div class="entry-detail" id="queue_block(block:Block)-instance-method">
       <div class="signature">
-        abstract 
-        def <strong>queue_block</strong>(block)
+        
+        def <strong>queue_block</strong>(block : <a href="../Zincir/Block.html">Block</a>)
 
-        <a class="method-permalink" href="#queue_block%28block%29-instance-method">#</a>
+        <a class="method-permalink" href="#queue_block%28block%3ABlock%29-instance-method">#</a>
       </div>
-      
-        <div class="doc"><p>Queues the <em>block</em> to be added to the blockchain</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/703ce4859132df80e439c46cf39a644a01767a52/src/zincir/blockchain.cr#L31" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/59e39b70c008558f49cfaa0413417194bb337259/src/zincir/blockchain.cr#L122" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tips:Array(Zincir::Blockchain::Chain)-instance-method">
+      <div class="signature">
+        
+        def <strong>tips</strong> : Array(Zincir::Blockchain::Chain)
+
+        <a class="method-permalink" href="#tips%3AArray%28Zincir%3A%3ABlockchain%3A%3AChain%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p><span class="flag orange">TODO</span>  This shouldn't be exposed, currently for debugging purposes</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/59e39b70c008558f49cfaa0413417194bb337259/src/zincir/blockchain.cr#L60" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -478,7 +502,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/703ce4859132df80e439c46cf39a644a01767a52/src/zincir/blockchain.cr#L20" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/59e39b70c008558f49cfaa0413417194bb337259/src/zincir/blockchain.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -494,7 +518,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/703ce4859132df80e439c46cf39a644a01767a52/src/zincir/blockchain.cr#L20" target="_blank">View source</a>]
+          [<a href="https://github.com/oguzbilgic/zincir-crystal/blob/59e39b70c008558f49cfaa0413417194bb337259/src/zincir/blockchain.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
